@@ -7,7 +7,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ label, onClick, variant }) => {
-  const baseStyle = "w-full p-2 rounded text-white font-medium";
+  const baseStyle = "w-44 p-2 rounded text-white font-medium";
   const styles = {
     primary: "bg-blue-600 hover:bg-blue-700",
     secondary: "bg-gray-600 hover:bg-gray-700",
