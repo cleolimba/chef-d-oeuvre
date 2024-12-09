@@ -25,7 +25,7 @@ const TruckRegistrationPage = () => {
   };
 
   const handleSave = () => {
-    navigate("/caillasse"); // Redirige vers la page "Caillasse" après l'enregistrement
+    navigate("/commande");
   };
 
   return (
