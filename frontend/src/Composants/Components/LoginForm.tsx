@@ -22,7 +22,7 @@ const LoginForm = () => {
 
   const handleLogin = () => {
     if (validateForm()) {
-      navigate("/dashboard");
+      navigate("/client");
     }
   };
 
