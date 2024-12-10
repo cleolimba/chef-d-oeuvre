@@ -1,18 +1,21 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import HeaderG from "../Components/HeaderG";
 import FormField from "../Components/FormField";
 import Button from "../Components/Button";
 
-const RecuDeCaisse: React.FC = () => {
+const RecueCaisse: React.FC = () => {
   const [formData, setFormData] = useState({
-    recu_caisse_num: "",
+    recue_caisse_numero: "",
     date: "",
     methode_paiement: "",
-    recu_de: "",
+    recue_de: "",
     motif: "",
     montant_chiffre: "",
     montant_lettre: "",
   });
+
+  const navigate = useNavigate(); // Utilisation de useNavigate
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -20,57 +23,72 @@ const RecuDeCaisse: React.FC = () => {
   };
 
   const handleAction = (action: string) => {
-    console.log(`Action: ${action}`, formData);
-    if (action === "Supprimer") {
-      setFormData({
-        recu_caisse_num: "",
-        date: "",
-        methode_paiement: "",
-        recu_de: "",
-        motif: "",
-        montant_chiffre: "",
-        montant_lettre: "",
-      });
+    if (action === "Envoyer") {
+      console.log("Données envoyées :", formData);
+      navigate("/chargement"); // Redirection vers la page de chargement
+    } else {
+      console.log(`Action: ${action}`, formData);
     }
   };
 
   return (
     <div className="min-h-screen bg-black text-white font-abhaya">
       <HeaderG />
-      <main className="w-full max-w-5xl mx-auto flex flex-col items-center mt-12">
-        {/* Titre */}
-        <h1 className="text-4xl font-bold mb-12 mt-16">REÇUE DE CAISSE</h1>
-
-        {/* Formulaire */}
-        <div className="grid grid-cols-2 gap-8 w-full px-8">
-          {/* Colonne gauche */}
-          <div className="flex flex-col space-y-6">
-            <FormField
-              label="Reçue de caisse n°"
-              name="recu_caisse_num"
-              value={formData.recu_caisse_num}
+      <main className="w-full max-w-5xl mx-automt-12">
+        {/* Champs alignés */}
+        <div className="space-y-4 w-[25rem] mt-24 ml-[35rem] mb-24">
+          <div className="flex items-center justify-between">
+            <label htmlFor="recue_caisse_numero" className="mr-4 w-1/3">
+              Reçue de caisse n°
+            </label>
+            <input
+              id="recue_caisse_numero"
+              name="recue_caisse_numero"
+              value={formData.recue_caisse_numero}
               onChange={handleChange}
-            />
-            <FormField
-              label="Date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-            />
-            <FormField
-              label="Méthode de paiement"
-              name="methode_paiement"
-              value={formData.methode_paiement}
-              onChange={handleChange}
+              className="w-2/3 bg-gray-800 text-white border border-gray-700 rounded p-2"
             />
           </div>
 
-          {/* Colonne droite */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex items-center justify-between">
+            <label htmlFor="date" className="mr-4 w-1/3">
+              Date
+            </label>
+            <input
+              id="date"
+              name="date"
+              type="date"
+              value={formData.date}
+              onChange={handleChange}
+              className="w-2/3 bg-gray-800 text-white border border-gray-700 rounded p-2"
+            />
+          </div>
+
+          <div className="flex items-center justify-between">
+            <label htmlFor="methode_paiement" className="mr-4 w-1/3">
+              Méthode de paiement
+            </label>
+            <input
+              id="methode_paiement"
+              name="methode_paiement"
+              value={formData.methode_paiement}
+              onChange={handleChange}
+              className="w-2/3 bg-gray-800 text-white border border-gray-700 rounded p-2"
+            />
+          </div>
+        </div>
+
+        {/* Titre */}
+        <h1 className="text-4xl font-bold mb-20 mt-16 flex justify-center">REÇUE DE CAISSE</h1>
+
+        {/* Formulaire principal */}
+        <div className="grid grid-cols-2 gap-16 items-center px-8 justify-center ml-20">
+          {/* Champs de formulaire gauche */}
+          <div className="flex flex-col space-y-6 w-80">
             <FormField
               label="Reçue de"
-              name="recu_de"
-              value={formData.recu_de}
+              name="recue_de"
+              value={formData.recue_de}
               onChange={handleChange}
             />
             <FormField
@@ -79,6 +97,10 @@ const RecuDeCaisse: React.FC = () => {
               value={formData.motif}
               onChange={handleChange}
             />
+          </div>
+
+          {/* Champs de formulaire droite */}
+          <div className="flex flex-col space-y-6 w-80">
             <FormField
               label="Montant en chiffre"
               name="montant_chiffre"
@@ -95,7 +117,7 @@ const RecuDeCaisse: React.FC = () => {
         </div>
 
         {/* Boutons */}
-        <div className="flex space-x-8 mt-16">
+        <div className="flex space-x-8 mt-32 justify-center">
           <Button
             label="Envoyer"
             onClick={() => handleAction("Envoyer")}
@@ -117,4 +139,4 @@ const RecuDeCaisse: React.FC = () => {
   );
 };
 
-export default RecuDeCaisse;
+export default RecueCaisse;

@@ -5,11 +5,12 @@ type FormFieldProps = {
   name: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  type?: string;
 };
 
 const FormField: React.FC<FormFieldProps> = ({ label, name, value, onChange }) => {
   return (
-    <div className="flex flex-col space-y-2">
+    <div className="flex flex-col">
       <label className="text-lg">{label}</label>
       <input
         type="text"
