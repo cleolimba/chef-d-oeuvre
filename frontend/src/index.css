@@ -1,9 +1,14 @@
-
-@import "react-phone-input-2/lib/style.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply bg-white text-black;
+}
+
+html.dark {
+  @apply bg-black text-white;
+}
 
 /* Ajoutez vos styles personnalisés ici */
 

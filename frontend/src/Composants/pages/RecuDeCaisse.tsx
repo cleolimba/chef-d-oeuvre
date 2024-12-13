@@ -32,8 +32,11 @@ const RecueCaisse: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-abhaya">
+    <div className="min-h-screen font-abhaya">
+      <div className="fixed top-0 left-0 w-full h-16">
       <HeaderG />
+      </div>
+      
       <main className="w-full max-w-5xl mx-automt-12">
         {/* Champs alignés */}
         <div className="space-y-4 w-[25rem] mt-24 ml-[35rem] mb-24">

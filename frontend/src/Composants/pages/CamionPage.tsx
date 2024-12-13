@@ -29,8 +29,10 @@ const TruckRegistrationPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <HeaderG />
+    <div className="min-h-screen">
+      <div className="fixed top-0 left-0 w-full h-16 z-50">
+        <HeaderG />
+      </div>
       <main className="w-full max-w-5xl mx-auto flex flex-col items-center mt-12">
         <h1 className="text-4xl font-bold mb-24 mt-20 font-abhaya">ENREGISTREMENT CAMION</h1>
 

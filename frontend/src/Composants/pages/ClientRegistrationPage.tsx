@@ -28,9 +28,9 @@ const ClientRegistrationPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       {isLoading ? (
-        <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-6">
+        <div className="min-h-screen flex flex-col items-center justify-center gap-6">
           <h1 className="text-3xl font-bold">Bienvenue dans votre espace !</h1>
         </div>
       ) : (

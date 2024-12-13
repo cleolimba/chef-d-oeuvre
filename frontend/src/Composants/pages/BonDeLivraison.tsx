@@ -41,9 +41,14 @@ const BonDeLivraison: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-abhaya">
-      <HeaderG />
-      <main className="w-full max-w-6xl mx-auto flex flex-col items-center mt-12">
+    <div className="min-h-screen font-abhaya">
+      {/* Header fixe */}
+      <div className="fixed top-0 w-full z-50">
+        <HeaderG />
+      </div>
+
+      {/* Contenu principal avec un padding pour éviter que le header cache les éléments */}
+      <main className="w-full max-w-6xl mx-auto flex flex-col items-center mt-32">
         {/* Titre */}
         <h1 className="text-4xl font-bold mb-12">BON DE LIVRAISON</h1>
 

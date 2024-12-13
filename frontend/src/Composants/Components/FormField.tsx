@@ -17,7 +17,7 @@ const FormField: React.FC<FormFieldProps> = ({ label, name, value, onChange }) =
         name={name}
         value={value}
         onChange={onChange}
-        className="w-full p-2 rounded bg-white text-black"
+        className="w-full p-2 rounded bg-gray-200 focus:outline-none focus:bg-gray-300"
       />
     </div>
   );

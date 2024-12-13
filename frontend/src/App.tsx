@@ -8,6 +8,11 @@ import Caillasses from './Composants/pages/Caillasses';
 import EnregistrementCommande from './Composants/pages/EnregistrementCommande';
 import BonDeLivraison from './Composants/pages/BonDeLivraison';
 import RecuDeCaisse from './Composants/pages/RecuDeCaisse';
+import AutorisationDeChargement from './Composants/pages/AutorisationDeChargement';
+import BonDeRecette from './Composants/pages/BonRecette';
+import RapportAnalyse from './Composants/pages/RapportAnalyse';
+import UserProfile from './Composants/pages/UserProfile';
+import Parametre from './Composants/pages/Parametre';
 
 function App() {
   return (
@@ -18,10 +23,15 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/client" element={<ClientRegistrationPage />} />
         <Route path="/camion" element={<CamionPage />} />
-        <Route path="/caillasse" element={<Caillasses />} />
+        <Route path="/caillasses" element={<Caillasses />} />
         <Route path="/commande" element={<EnregistrementCommande />} />
         <Route path="/BonDeLivraison" element={<BonDeLivraison />} />
         <Route path="/caisse" element={<RecuDeCaisse />} />
+        <Route path="/chargement" element={<AutorisationDeChargement />} />
+        <Route path="/bonRecette" element={<BonDeRecette />} />
+        <Route path="/rapportAnalyse" element={<RapportAnalyse />} />
+        <Route path="/profilUtilisateur" element={<UserProfile />} />
+        <Route path="/parametre" element={<Parametre />} />
       </Routes>
     </Router>
   );
