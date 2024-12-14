@@ -14,7 +14,7 @@ const UserProfile: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-800 text-white rounded-lg shadow-md">
+    <div className="rounded-lg shadow-md">
         <HeaderG />
       {/* Image de profil */}
       <div className="flex justify-center mb-4">
@@ -28,11 +28,11 @@ const UserProfile: React.FC = () => {
       {/* Informations utilisateur */}
       <div className="text-center">
         <h2 className="text-2xl font-bold mb-2">{userProfile.name}</h2>
-        <p className="text-gray-400 mb-4">{userProfile.email}</p>
-        <p className="text-gray-400 mb-4">Adresse : {userProfile.address}</p>
-        <p className="text-gray-400 mb-4">Téléphone : {userProfile.phone}</p>
-        <p className="text-gray-400 mb-4">Département : {userProfile.department}</p>
-        <p className="text-gray-400 mb-4">Rôle : {userProfile.role}</p>
+        <p className="mb-4">{userProfile.email}</p>
+        <p className="mb-4">Adresse : {userProfile.address}</p>
+        <p className="mb-4">Téléphone : {userProfile.phone}</p>
+        <p className="mb-4">Département : {userProfile.department}</p>
+        <p className="mb-4">Rôle : {userProfile.role}</p>
       </div>
     </div>
   );

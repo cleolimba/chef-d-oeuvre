@@ -51,53 +51,53 @@ const ClientForm = () => {
 
   return (
     <form className="max-w-4xl mx-auto mt-12">
-      <h1 className="text-center text-4xl font-bold text-white mb-24 mt-24 font-abhaya">
+      <h1 className="text-center text-4xl font-bold mb-24 mt-24 font-abhaya">
         ENREGISTREMENT CLIENT
       </h1>
       <div className="grid grid-cols-2 gap-40">
         {/* Champs gauche */}
         <div>
           <div>
-            <label className="block text-white text-lg mb-2 font-abhaya">Id Client</label>
+            <label className="block text-lg mb-2 font-abhaya">Id Client</label>
             <input
               type="text"
               name="idClient"
               value={formData.idClient}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-white text-black font-abhaya"
+              className="w-full p-2 rounded bg-gray-800 font-abhaya"
             />
           </div>
 
           <div className="mt-8">
-            <label className="block text-white text-lg mb-2 font-abhaya">Mat. Agent</label>
+            <label className="block text-lg mb-2 font-abhaya">Mat. Agent</label>
             <input
               type="text"
               name="matAgent"
               value={formData.matAgent}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-white text-black font-abhaya"
+              className="w-full p-2 rounded bg-gray-800 font-abhaya"
             />
           </div>
 
           <div className="mt-8">
-            <label className="block text-white text-lg mb-2 font-abhaya">Nom</label>
+            <label className="block text-lg mb-2 font-abhaya">Nom</label>
             <input
               type="text"
               name="nom"
               value={formData.nom}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-white text-black font-abhaya"
+              className="w-full p-2 rounded bg-gray-800 font-abhaya"
             />
           </div>
 
           <div className="mt-8">
-            <label className="block text-white text-lg mb-2 font-abhaya">Prénom</label>
+            <label className="block text-lg mb-2 font-abhaya">Prénom</label>
             <input
               type="text"
               name="prenom"
               value={formData.prenom}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-white text-black font-abhaya"
+              className="w-full p-2 rounded bg-gray-800 font-abhaya"
             />
           </div>
         </div>
@@ -105,18 +105,18 @@ const ClientForm = () => {
         {/* Champs droit */}
         <div>
           <div>
-            <label className="block text-white text-lg mb-2 font-abhaya">Profession</label>
+            <label className="block text-lg mb-2 font-abhaya">Profession</label>
             <input
               type="text"
               name="profession"
               value={formData.profession}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-white text-black font-abhaya"
+              className="w-full p-2 rounded bg-gray-800 font-abhaya"
             />
           </div>
 
           <div className="mt-8">
-            <label className="block text-white text-lg mb-2 font-abhaya">Contact</label>
+            <label className="block text-lg mb-2 font-abhaya">Contact</label>
             {/* Champ pour numéro de téléphone avec styles personnalisés */}
             <PhoneInput
               country={"cd"} // Par défaut, Congo RDC
@@ -133,7 +133,7 @@ const ClientForm = () => {
                 paddingLeft : "50px",
                 borderRadius: "5px", // Coins arrondis
                 fontSize: "16px", // Taille de la police
-                backgroundColor: "white", // Couleur de fond
+                backgroundColor: "#gray-800", // Couleur de fond
                 border: "1px solid #000", // Bordure noire
               }}
               containerStyle={{
@@ -148,12 +148,12 @@ const ClientForm = () => {
           </div>
 
           <div className="mt-8">
-            <label className="block text-white text-lg mb-2 font-abhaya">Sexe</label>
+            <label className="block text-lg mb-2 font-abhaya">Sexe</label>
             <select
               name="sexe"
               value={formData.sexe}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-white text-black font-abhaya"
+              className="w-full p-2 rounded bg-gray-800 font-abhaya"
             >
               <option value="">Choisir...</option>
               <option value="male">Masculin</option>
@@ -162,13 +162,13 @@ const ClientForm = () => {
           </div>
 
           <div className="mt-8">
-            <label className="block text-white text-lg mb-2 font-abhaya">Adresse</label>
+            <label className="block text-lg mb-2 font-abhaya">Adresse</label>
             <input
               type="text"
               name="adresse"
               value={formData.adresse}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-white text-black font-abhaya"
+              className="w-full p-2 rounded bg-gray-800 font-abhaya"
             />
           </div>
         </div>

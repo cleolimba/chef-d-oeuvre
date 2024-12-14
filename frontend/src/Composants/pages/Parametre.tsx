@@ -10,6 +10,7 @@ const Parametre = () => {
   const [isHistoryEnabled, setIsHistoryEnabled] = useState<boolean>(false);
   const [isMailAlertEnabled, setIsMailAlertEnabled] = useState<boolean>(true);
   const [isSauvegardeEnabled, setIsSauvegardeEnabled] = useState<boolean>(false);
+  const [isMiseAJourEnabled, setIsMiseAJourEnabled] = useState<boolean>(false);
 
   const parameters = [
     {
@@ -42,6 +43,14 @@ const Parametre = () => {
       description: {
         active: "Votre sauvegarde a été créée avec succès et est prête pour une utilisation future.",
         inactive: "Les données ont été restaurées à partir de la dernière sauvegarde, tout est à jour.",
+      },
+    },
+    {
+      id: "miseAJour",
+      title: "Mise à jour",
+      description: {
+        active: "Une nouvelle mise à jour est disponible. Vous pouvez la mettre à jour maintenant.",
+        inactive: "Vous avez la dernière mise à jour disponible.",
       },
     },
   ];
@@ -97,7 +106,12 @@ const Parametre = () => {
                           ? isSauvegardeEnabled
                             ? "Activée"
                             : "Désactivée"
-                          : ""}
+                          : param.id === "sauvegarde"
+                          ? isMiseAJourEnabled
+                            ? "Créée"
+                            : "Désactivée"
+                          : param.id === "miseAJour"
+                        }
                       </p>
                       <button
                         className={`w-12 h-6 flex items-center rounded-full p-1 ${
@@ -117,7 +131,11 @@ const Parametre = () => {
                             ? isSauvegardeEnabled
                               ? "bg-blue-500"
                               : "bg-gray-400"
-                            : ""
+                            : param.id === "sauvegarde"
+                            ? isMiseAJourEnabled
+                              ? "bg-blue-500"
+                              : "bg-gray-400"
+                            : param.id === "miseAJour"
                         }`}
                         onClick={() => {
                           if (param.id === "security") {
@@ -128,6 +146,9 @@ const Parametre = () => {
                             setIsMailAlertEnabled(!isMailAlertEnabled);
                           } else if (param.id === "sauvegarde") {
                             setIsSauvegardeEnabled(!isSauvegardeEnabled);
+                          }
+                          else if (param.id === "miseAJour") {
+                            setIsMiseAJourEnabled(!isMiseAJourEnabled);
                           }
                         }}
                       >
@@ -149,7 +170,11 @@ const Parametre = () => {
                               ? isSauvegardeEnabled
                                 ? "translate-x-6"
                                 : "translate-x-0"
-                              : ""
+                              : param.id === "sauvegarde"
+                              ? isMiseAJourEnabled
+                                ? "translate-x-6"
+                                : "translate-x-0"
+                              : param.id === "miseAJour"
                           }`}
                         ></div>
                       </button>
@@ -171,7 +196,12 @@ const Parametre = () => {
                         ? isSauvegardeEnabled
                           ? param.description.active
                           : param.description.inactive
-                        : ""}
+                        : param.id === "sauvegarde"
+                        ? isMiseAJourEnabled
+                          ? param.description.active
+                          : param.description.inactive
+                        : param.id === "miseAJour"
+                        }
                     </p>
                   </div>
                 </div>

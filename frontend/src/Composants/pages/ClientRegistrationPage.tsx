@@ -35,7 +35,9 @@ const ClientRegistrationPage = () => {
         </div>
       ) : (
         <>
-          <HeaderG />
+          <div className="fixed top-0 left-0 w-full z-50">
+            <HeaderG />
+          </div>
           <main className="container mx-auto px-4">
             {/* Formulaire client */}
             <ClientForm />

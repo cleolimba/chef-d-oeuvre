@@ -44,7 +44,7 @@ const Form = () => {
         {/* Partie gauche */}
         <div>
           <div className="space-y-2">
-            <label htmlFor="firstName" className="block text-white text-lg">
+            <label htmlFor="firstName" className="block text-lg">
               Nom
             </label>
             <input
@@ -54,12 +54,12 @@ const Form = () => {
               value={formData.firstName}
               onChange={handleChange}
               placeholder="Nom"
-              className="w-full px-2 py-2 rounded bg-white text-black"
+              className="w-full px-2 py-2 rounded bg-gray-800"
             />
           </div>
 
           <div className="space-y-2 mt-8">
-            <label htmlFor="lastName" className="block text-white text-lg">
+            <label htmlFor="lastName" className="block text-lg">
               Prénom
             </label>
             <input
@@ -69,12 +69,12 @@ const Form = () => {
               value={formData.lastName}
               onChange={handleChange}
               placeholder="Prénom"
-              className="w-full px-2 py-2 rounded bg-white text-black"
+              className="w-full px-2 py-2 rounded bg-gray-800"
             />
           </div>
 
           <div className="space-y-2 mt-8">
-            <label htmlFor="email" className="block text-white text-lg">
+            <label htmlFor="email" className="block text-lg">
               E-mail address
             </label>
             <input
@@ -84,7 +84,7 @@ const Form = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="votre adresse mail"
-              className="w-full px-2 py-2 rounded bg-white text-black"
+              className="w-full px-2 py-2 rounded bg-gray-800"
             />
           </div>
         </div>
@@ -92,7 +92,7 @@ const Form = () => {
         {/* Partie droite */}
         <div>
           <div className="space-y-2">
-            <label htmlFor="role" className="block text-white text-lg">
+            <label htmlFor="role" className="block text-lg">
               Rôle
             </label>
             <div className="relative">
@@ -101,7 +101,7 @@ const Form = () => {
                 name="role"
                 value={formData.role}
                 onChange={handleChange}
-                className="w-full px-2 py-2 rounded bg-white text-black appearance-none"
+                className="w-full px-2 py-2 rounded appearance-none bg-gray-800"
               >
                 <option value="Administrateur">Administrateur</option>
                 <option value="Réceptionniste">Réceptionniste</option>
@@ -123,7 +123,7 @@ const Form = () => {
           </div>
 
           <div className="space-y-2 mt-8">
-            <label htmlFor="password" className="block text-white text-lg">
+            <label htmlFor="password" className="block text-lg">
               Mot de passe
             </label>
             <div className="relative">
@@ -134,7 +134,7 @@ const Form = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="********"
-                className="w-full px-2 py-2 rounded bg-white text-black"
+                className="w-full px-2 py-2 rounded bg-gray-800"
               />
               <button
                 type="button"
@@ -150,7 +150,7 @@ const Form = () => {
           </div>
 
           <div className="space-y-2 mt-8">
-            <label htmlFor="confirmPassword" className="block text-white text-lg">
+            <label htmlFor="confirmPassword" className="block text-lg">
               Confirmation mot de passe
             </label>
             <div className="relative">
@@ -161,7 +161,7 @@ const Form = () => {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="********"
-                className="w-full px-2 py-2 rounded bg-white text-black"
+                className="w-full px-2 py-2 rounded bg-gray-800"
               />
               <button
                 type="button"

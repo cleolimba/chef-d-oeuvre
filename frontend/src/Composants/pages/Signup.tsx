@@ -22,10 +22,12 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black">
-      <HeaderG />
+    <div className="min-h-screen">
+      <div className="fixed top-0 left-0 w-full h-16 z-50">
+        <HeaderG />
+      </div>
       <main className="container mx-auto px-4">
-        <h1 className="text-white text-4xl font-light text-center mt-24 font-abhaya">
+        <h1 className="text-4xl font-light text-center mt-24 font-abhaya">
           S'INSCRIRE
         </h1>
         <Form />

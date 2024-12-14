@@ -42,8 +42,10 @@ const RapportAnalyse: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white px-6 py-10">
+    <div className="px-6 py-10">
+      <div className="fixed top-0 left-0 w-full h-16 z-50">
         <HeaderG />
+      </div>
       {/* Titre */}
       <h1 className="text-3xl font-bold text-center mb-8">Rapport d'Analyse</h1>
 

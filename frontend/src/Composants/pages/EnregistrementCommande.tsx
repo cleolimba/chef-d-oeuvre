@@ -45,8 +45,10 @@ const EnregistrementCommande: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-abhaya">
-      <HeaderG />
+    <div className="min-h-screen font-abhaya">
+      <div className="fixed top-0 left-0 w-full h-16 z-50">
+        <HeaderG />
+      </div>
       <main className="w-full max-w-5xl mx-auto flex flex-col items-center mt-12">
         {/* Titre */}
         <h1 className="text-4xl font-bold mb-12 mt-16">ENREGISTREMENT COMMANDE</h1>
