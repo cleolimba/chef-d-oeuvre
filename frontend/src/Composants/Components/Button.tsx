@@ -3,6 +3,7 @@ import React from 'react';
 interface ButtonProps {
   label: string;
   variant: 'primary' | 'secondary';
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({ label, variant }) => {
