@@ -9,40 +9,22 @@ export default class Client extends BaseModel {
   declare nom: string
 
   @column()
-  declare postnom: string
+  declare prenom: string
 
   @column()
-  declare prenom: string
+  declare sexe: string
 
   @column()
   declare email: string
 
   @column()
-  declare contact: string
-
-  @column()
   declare adresse: string
 
   @column()
-  declare sexe: string
-
-  // @column()
-  // declare service: string
-
-  // @column()
-  // declare grade: string
-
-  // @column()
-  // declare fonction: string
-
-  // @column()
-  // declare profession: string
+  declare contact: string
 
   @column()
-  declare mot_de_passe: string
-
-  @column()
-  declare role: string
+  declare matricule_agent: string
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
