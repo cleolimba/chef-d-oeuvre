@@ -18,7 +18,16 @@ export default class Client extends BaseModel {
   declare email: string
 
   @column()
+  declare mot_de_passe: string
+
+  @column()
+  declare confirmation_mot_de_passe: string
+
+  @column()
   declare adresse: string
+
+  @column()
+  declare role: string
 
   @column()
   declare contact: string

@@ -11,8 +11,11 @@ export default class extends BaseSchema {
       table.string('sexe', 50).notNullable()
       table.string('email', 255).notNullable().unique()
       table.string('adresse').notNullable()
+      table.string('role').notNullable()
       table.string('contact').notNullable()
       table.string('matricule_agent').notNullable()
+      table.string('mot_de_passe', 255).notNullable()
+      table.string('confirmation_mot_de_passe', 255).notNullable()
 
       table.timestamp('created_at')
       table.timestamp('updated_at')
